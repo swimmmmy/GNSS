@@ -1,0 +1,419 @@
+{
+  "name": "Attack Scenarios",
+  "children": [
+    {
+      "name": "Jamming",
+      "count": 7,
+      "children": [
+        {
+          "name": "dynamic",
+          "count": 6,
+          "children": [
+            {
+              "name": "High Power (<10W)",
+              "count": 6,
+              "children": [
+                {
+                  "name": "Bands: E1,E5,E5b,E6,L1,L2,L3,L5",
+                  "count": 1,
+                  "children": [
+                    {
+                      "name": "1.11.8",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "1.580000 W",
+                      "bands": "E1,E5,E5b,E6,L1,L2,L3,L5",
+                      "size": 10
+                    }
+                  ]
+                },
+                {
+                  "name": "Bands: E1,E5,E5a,E5b,E6,L1,L2,L3,L5",
+                  "count": 5,
+                  "children": [
+                    {
+                      "name": "1.11.7",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "1.580000 W",
+                      "bands": "E1,E5,E5a,E5b,E6,L1,L2,L3,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "1.10.6",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "1.000000 W",
+                      "bands": "E1,E5,E5a,E5b,E6,L1,L2,L3,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "custom 2",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "1.580000 W",
+                      "bands": "E1,E5,E5a,E5b,E6,L1,L2,L3,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "custom 1",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "1.580000 W",
+                      "bands": "E1,E5,E5a,E5b,E6,L1,L2,L3,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "1.10.4",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "1.580000 W",
+                      "bands": "E1,E5,E5a,E5b,E6,L1,L2,L3,L5",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "stationary",
+          "count": 1,
+          "children": [
+            {
+              "name": "Very High Power (\u226510W)",
+              "count": 1,
+              "children": [
+                {
+                  "name": "Bands: L1,L2,L5",
+                  "count": 1,
+                  "children": [
+                    {
+                      "name": "1.6.4",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Jamming",
+                      "power": "50.000000 W",
+                      "bands": "L1,L2,L5",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spoofing",
+      "count": 8,
+      "children": [
+        {
+          "name": "dynamic",
+          "count": 3,
+          "children": [
+            {
+              "name": "Medium Power (<1W)",
+              "count": 3,
+              "children": [
+                {
+                  "name": "Bands: E1,E5,L1,L2,L5",
+                  "count": 3,
+                  "children": [
+                    {
+                      "name": "2.3.13,2.3.15",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,E5,L1,L2,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "2.3.2",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,E5,L1,L2,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "2.2.3,2.3.3",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,E5,L1,L2,L5",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "stationary",
+          "count": 5,
+          "children": [
+            {
+              "name": "Medium Power (<1W)",
+              "count": 5,
+              "children": [
+                {
+                  "name": "Bands: E1,E5,L1,L2,L5",
+                  "count": 3,
+                  "children": [
+                    {
+                      "name": "2.3.15,2.3.12",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,E5,L1,L2,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "2.3.10,2.3.11",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,E5,L1,L2,L5",
+                      "size": 10
+                    },
+                    {
+                      "name": "2.3.5,2.3.8",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,E5,L1,L2,L5",
+                      "size": 10
+                    }
+                  ]
+                },
+                {
+                  "name": "Bands: E1,L1",
+                  "count": 1,
+                  "children": [
+                    {
+                      "name": "2.1.3,2.1.2,2.1.4",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "E1,L1",
+                      "size": 10
+                    }
+                  ]
+                },
+                {
+                  "name": "Bands: L1,L2,L5",
+                  "count": 1,
+                  "children": [
+                    {
+                      "name": "2.1.1",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing",
+                      "power": "0.316000 W",
+                      "bands": "L1,L2,L5",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Meaconing",
+      "count": 5,
+      "children": [
+        {
+          "name": "dynamic",
+          "count": 2,
+          "children": [
+            {
+              "name": "Very High Power (\u226510W)",
+              "count": 2,
+              "children": [
+                {
+                  "name": "Bands: E1,L1,L2",
+                  "count": 2,
+                  "children": [
+                    {
+                      "name": "3.1.3,3.1.4",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Meaconing",
+                      "power": "10.000000 W",
+                      "bands": "E1,L1,L2",
+                      "size": 10
+                    },
+                    {
+                      "name": "3.2.8",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Meaconing",
+                      "power": "10.000000 W",
+                      "bands": "E1,L1,L2",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "stationary",
+          "count": 3,
+          "children": [
+            {
+              "name": "High Power (<10W)",
+              "count": 1,
+              "children": [
+                {
+                  "name": "Bands: E1,L1,L2",
+                  "count": 1,
+                  "children": [
+                    {
+                      "name": "3.1.1,3.1.2",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Meaconing",
+                      "power": "1.000000 W",
+                      "bands": "E1,L1,L2",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Very High Power (\u226510W)",
+              "count": 2,
+              "children": [
+                {
+                  "name": "Bands: E1,L1,L2",
+                  "count": 2,
+                  "children": [
+                    {
+                      "name": "3.2.7",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Meaconing",
+                      "power": "10.000000 W",
+                      "bands": "E1,L1,L2",
+                      "size": 10
+                    },
+                    {
+                      "name": "3.2.8",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Meaconing",
+                      "power": "10.000000 W",
+                      "bands": "E1,L1,L2",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jamming+Spoofing",
+      "count": 4,
+      "children": [
+        {
+          "name": "dynamic",
+          "count": 2,
+          "children": [
+            {
+              "name": "Low Power (<100mW)",
+              "count": 2,
+              "children": [
+                {
+                  "name": "Bands: L1",
+                  "count": 2,
+                  "children": [
+                    {
+                      "name": "2.6.4",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing + Jamming",
+                      "power": "0.010000 W",
+                      "bands": "L1",
+                      "size": 10
+                    },
+                    {
+                      "name": "2.6.2",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing + Jamming",
+                      "power": "0.010000 W",
+                      "bands": "L1",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "stationary",
+          "count": 2,
+          "children": [
+            {
+              "name": "Low Power (<100mW)",
+              "count": 2,
+              "children": [
+                {
+                  "name": "Bands: L1",
+                  "count": 2,
+                  "children": [
+                    {
+                      "name": "2.6.3",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing + Jamming",
+                      "power": "0.010000 W",
+                      "bands": "L1",
+                      "size": 10
+                    },
+                    {
+                      "name": "2.6.1",
+                      "type": "scenario",
+                      "shape": "circle",
+                      "attack_type": "Spoofing + Jamming",
+                      "power": "0.010000 W",
+                      "bands": "L1",
+                      "size": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

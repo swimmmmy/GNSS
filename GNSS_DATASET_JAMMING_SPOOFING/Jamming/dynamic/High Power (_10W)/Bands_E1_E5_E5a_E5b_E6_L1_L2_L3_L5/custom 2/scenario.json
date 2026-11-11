@@ -1,0 +1,27 @@
+{
+  "scenario": "Scenario 7",
+  "scenario_id": "custom 2",
+  "date": "2024-09-10",
+  "attack_type": "Jamming",
+  "attack_parameters": {
+    "frequency_band": "G1, L1, E1, B1C, B1I,E6,B3I,G2,L2,E5b, E5b,B2b, B2I,L5,E5a,B2a ",
+    "power_min": "1 W",
+    "power_max": "1.58 W",
+    "Rover states": "dynamic",
+    "attack_type": "Motorcade with low-power commercially available jammers (placed on stationary vehicle)",
+    "jammer_model": "H6.5",
+    "Modulation": "Triangle",
+    "description": "Motorcade with low-power commercially available jammers (placed on stationary vehicle) Vehicle starting in multi-band denied environment.Test performed jammer H6.5. DUT vehicles will start up close to the parked car with the jammer, and then drive away.",
+    "zone": "3"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-10T17:00:00Z",
+      "event": "Jamming started"
+    },
+    {
+      "timestamp_utc": "2024-09-10T18:00:00Z",
+      "event": "Jamming end"
+    }
+  ]
+}

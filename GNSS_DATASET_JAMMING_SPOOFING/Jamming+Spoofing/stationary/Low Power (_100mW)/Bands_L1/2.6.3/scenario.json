@@ -1,0 +1,30 @@
+{
+  "scenario": "Scenario 12",
+  "scenario_id": "2.6.3",
+  "date": "2024-09-12",
+  "attack_type": "Spoofing + Jamming",
+  "attack_parameters": {
+    "frequency_band": "L1, G1",
+    "frequency_band_spoofed": "L1",
+    "frequency_band_jammed": "G1",
+    "power_min": "0.01 W",
+    "power_max": "0.01 W",
+    "rover_states": "stationary",
+    "attack_type": "Incoherent GPS position/time spoofing + jamming",
+    "transmitter_equipment": "F1.2",
+    "simulated_position": "70.000000N, 10.000000E (fixed spoofed location)",
+    "simulated_start_time": "2024-09-12T12:18:10Z",
+    "description": "2.6.3: A vehicle departs the starting point at 12:18:00, traveling south on Stavedalsveien (FV7702) at 40 km/h. At 12:18:10, spoofing (GPS L1) and jamming (GLONASS G1) both begin at 0.01 W (10 dBm). The spoofed position is fixed at 70\u00b0N, 10\u00b0E, while the real vehicle continues moving. Scenario ends at 12:38.",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-12T12:18:00Z",
+      "event": "Initial jamming started "
+    },
+    {
+      "timestamp_utc": "2024-09-12T12:38:00Z",
+      "event": "Initial jamming ended "
+    }
+  ]
+}

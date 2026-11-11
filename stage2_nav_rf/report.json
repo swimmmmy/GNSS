@@ -1,0 +1,74 @@
+{
+  "train_experiments": [
+    "dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4",
+    "stationary/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2",
+    "stationary/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7",
+    "stationary/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8"
+  ],
+  "test_experiment": "dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8",
+  "train_rows": 5977,
+  "test_rows": 1234,
+  "confusion_matrix": [
+    [
+      234,
+      0
+    ],
+    [
+      12,
+      988
+    ]
+  ],
+  "classification_report": {
+    "normal": {
+      "precision": 0.9512195121951219,
+      "recall": 1.0,
+      "f1-score": 0.975,
+      "support": 234.0
+    },
+    "meaconing": {
+      "precision": 1.0,
+      "recall": 0.988,
+      "f1-score": 0.993963782696177,
+      "support": 1000.0
+    },
+    "accuracy": 0.9902755267423015,
+    "macro avg": {
+      "precision": 0.975609756097561,
+      "recall": 0.994,
+      "f1-score": 0.9844818913480885,
+      "support": 1234.0
+    },
+    "weighted avg": {
+      "precision": 0.9907498912914574,
+      "recall": 0.9902755267423015,
+      "f1-score": 0.9903677331411485,
+      "support": 1234.0
+    }
+  },
+  "features": [
+    "fixType",
+    "numSV",
+    "hAcc",
+    "vAcc",
+    "sAcc",
+    "headAcc",
+    "pDOP",
+    "gSpeed",
+    "distance_m_delta_1s",
+    "speed_mps_delta_1s",
+    "hAcc_delta_1s",
+    "pDOP_delta_1s",
+    "numSV_delta_1s",
+    "distance_m_delta_3s",
+    "speed_mps_delta_3s",
+    "hAcc_delta_3s",
+    "pDOP_delta_3s",
+    "numSV_delta_3s",
+    "distance_m_delta_5s",
+    "speed_mps_delta_5s",
+    "hAcc_delta_5s",
+    "pDOP_delta_5s",
+    "numSV_delta_5s"
+  ],
+  "warning": "EXPLORATORY ONLY: attack logs interpreted as local Norway time despite UTC field; independently verify. Units inferred heuristically. Receiver transfer not validated."
+}

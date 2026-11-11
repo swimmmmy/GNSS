@@ -1,0 +1,27 @@
+{
+  "scenario": "Scenario 1",
+  "scenario_id": "1.6.4",
+  "date": "2024-09-09",
+  "attack_type": "Jamming",
+  "attack_parameters": {
+    "frequency_band": "L1, G1, L2, L5",
+    "power_min": "0.2 \u00b5W",
+    "power_max": "50 W",
+    "Rover states": "stationary",
+    "Modulation": "ramping",
+    "attack_type": "Power ramping",
+    "jammer_model": "Jammer F8.1 \u201dPorcus Major\u201d",
+    "description": "Power ramping with Jammer F8.1 \u201dPorcus Major\u201d: 0.2 \u00b5W (-37dBm)  to 50 W (47dBm) with 2 dB increments PRN: L1, G1, L2, L5",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-09T16:25:00Z",
+      "event": "Jamming started"
+    },
+    {
+      "timestamp_utc": "2024-09-09T16:39:00Z",
+      "event": "Jamming end"
+    }
+  ]
+}

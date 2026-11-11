@@ -1,0 +1,48 @@
+{
+  "scenario": "Scenario 7",
+  "scenario_id": "2.3.15,2.3.12",
+  "date": "2024-09-11",
+  "attack_type": "Spoofing",
+  "attack_parameters": {
+    "frequency_band": "E1,E5,L1,L2,L5",
+    "power_min": "0.316 W",
+    "power_max": "0.316 W",
+    "rover_states": "stationary",
+    "attack_type": "Simulated flying (routes 2 & 4)",
+    "transmitter_equipment": "S",
+    "description": "Scenario 7 includes two flying sub-scenarios with no jamming. (1) 2.3.15 (Helicopter, route 2) uses GPS L1/L2/L5 + Galileo E1/E5 at 0.316 W, starting over the sea 1 km north (Midnattskj\u00e6ran) at 200 m HAE. (2) 2.3.12 (Drone, route 4) uses GPS L1 C/A only at 0.316 W, starting at 69.277014014, 15.969328354, 40 m HAE. Spoofing transmissions are corrected for signal delay to ensure coherent signals at the victim aircraft\u2019s position. All start times are referenced to live GPS signals.",
+    "zone": "1",
+    "sub_scenario_2_3_15": {
+      "signals": "E1,E5,L1,L2,L5",
+      "jamming": "None",
+      "simulated_position": "1 km N over the sea (Midnattskj\u00e6ran) at 200 m HAE",
+      "simulated_start_time": "Referenced to live GPS signals",
+      "notes": "Helicopter scenario (route 2). Transmission corrected for signal delay; coherent signals."
+    },
+    "sub_scenario_2_3_12": {
+      "signals": "L1",
+      "jamming": "None",
+      "simulated_position": "69.277014014, 15.969328354, 40 m HAE",
+      "simulated_start_time": "Referenced to live GPS signals",
+      "notes": "Drone scenario (route 4). Transmission corrected for signal delay; coherent signals."
+    }
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-11T16:57:00Z",
+      "event": "Initial jamming started (sub-scenario 2.3.15)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T17:08:00Z",
+      "event": "Initial jamming ended (sub-scenario 2.3.15)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T17:12:00Z",
+      "event": "Continuous jamming started on other bands (sub-scenario 2.3.12)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T17:22:30Z",
+      "event": "Continuous jamming ended (sub-scenario 2.3.12)"
+    }
+  ]
+}

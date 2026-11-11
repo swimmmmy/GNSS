@@ -1,0 +1,8 @@
+Scenario ID: 3.2.7
+Attack Type: Meaconing
+Standardized Attack: Meaconing
+Rover State: stationary
+Bands: E1,L1,L2
+Power: 10.0 W
+Power Category: Very High Power (≥10W)
+Original Path: data/2024-09-10/scenario3_meaconing

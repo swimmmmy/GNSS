@@ -1,0 +1,332 @@
+Created 168 directories and files:
+
+attack_scenarios_tree/Jamming
+attack_scenarios_tree/Jamming+Spoofing
+attack_scenarios_tree/Jamming+Spoofing/dynamic
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/info.txt
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/scenario.json
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/info.txt
+attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/scenario.json
+attack_scenarios_tree/Jamming+Spoofing/stationary
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/info.txt
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/scenario.json
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/info.txt
+attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/scenario.json
+attack_scenarios_tree/Jamming/dynamic
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/info.txt
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/scenario.json
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/info.txt
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/scenario.json
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/info.txt
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/scenario.json
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/info.txt
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/scenario.json
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/info.txt
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/scenario.json
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/info.txt
+attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/scenario.json
+attack_scenarios_tree/Jamming/stationary
+attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)
+attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5
+attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4
+attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/info.txt
+attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/scenario.json
+attack_scenarios_tree/Meaconing
+attack_scenarios_tree/Meaconing/dynamic
+attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)
+attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2
+attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2
+attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/info.txt
+attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/scenario.json
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/info.txt
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/scenario.json
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/info.txt
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/scenario.json
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/info.txt
+attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/scenario.json
+attack_scenarios_tree/Spoofing
+attack_scenarios_tree/Spoofing/dynamic
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/info.txt
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/scenario.json
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/info.txt
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/scenario.json
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/info.txt
+attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/scenario.json
+attack_scenarios_tree/Spoofing/stationary
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/info.txt
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/scenario.json
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/info.txt
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/scenario.json
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/info.txt
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/scenario.json
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/info.txt
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/scenario.json
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/info.txt
+attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/scenario.json
+
+Copied 228 data files:
+
+Copied data/2024-09-09/scenario3_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/mon_rf.csv
+Copied data/2024-09-09/scenario3_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/nav_pvt.csv
+Copied data/2024-09-09/scenario3_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/rinex.csv
+Copied data/2024-09-09/scenario3_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/mon_rf.csv
+Copied data/2024-09-09/scenario3_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/nav_pvt.csv
+Copied data/2024-09-09/scenario3_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/rinex.csv
+Copied data/2024-09-09/scenario3_jamming/24DR400_240909_f9p_1-11-8.ubx to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/24DR400_240909_f9p_1-11-8.ubx
+Copied important file data/2024-09-09/scenario3_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/mon_rf.csv
+Copied important file data/2024-09-09/scenario3_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/nav_pvt.csv
+Copied important file data/2024-09-09/scenario3_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5b_E6_L1_L2_L3_L5/1.11.8/rinex.csv
+Copied data/2024-09-09/scenario2_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/mon_rf.csv
+Copied data/2024-09-09/scenario2_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/nav_pvt.csv
+Copied data/2024-09-09/scenario2_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/rinex.csv
+Copied data/2024-09-09/scenario2_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/mon_rf.csv
+Copied data/2024-09-09/scenario2_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/nav_pvt.csv
+Copied data/2024-09-09/scenario2_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/rinex.csv
+Copied data/2024-09-09/scenario2_jamming/24DR400_240909_f9p_1-11-7.ubx to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/24DR400_240909_f9p_1-11-7.ubx
+Copied important file data/2024-09-09/scenario2_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/mon_rf.csv
+Copied important file data/2024-09-09/scenario2_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/nav_pvt.csv
+Copied important file data/2024-09-09/scenario2_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.11.7/rinex.csv
+Copied data/2024-09-09/scenario1_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/mon_rf.csv
+Copied data/2024-09-09/scenario1_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/nav_pvt.csv
+Copied data/2024-09-09/scenario1_jamming/rinex.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/rinex.csv
+Copied data/2024-09-09/scenario1_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/mon_rf.csv
+Copied data/2024-09-09/scenario1_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/nav_pvt.csv
+Copied data/2024-09-09/scenario1_jamming/rinex.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/rinex.csv
+Copied data/2024-09-09/scenario1_jamming/24DR400_240909_f9p_1-6-4.ubx to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/24DR400_240909_f9p_1-6-4.ubx
+Copied important file data/2024-09-09/scenario1_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/mon_rf.csv
+Copied important file data/2024-09-09/scenario1_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/nav_pvt.csv
+Copied important file data/2024-09-09/scenario1_jamming/rinex.csv to attack_scenarios_tree/Jamming/stationary/Very High Power (≥10W)/Bands_L1_L2_L5/1.6.4/rinex.csv
+Copied data/2024-09-11/scenario7_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/mon_rf.csv
+Copied data/2024-09-11/scenario7_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/nav_pvt.csv
+Copied data/2024-09-11/scenario7_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/rinex.csv
+Copied data/2024-09-11/scenario7_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/mon_rf.csv
+Copied data/2024-09-11/scenario7_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/nav_pvt.csv
+Copied data/2024-09-11/scenario7_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/rinex.csv
+Copied important file data/2024-09-11/scenario7_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/mon_rf.csv
+Copied important file data/2024-09-11/scenario7_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/nav_pvt.csv
+Copied important file data/2024-09-11/scenario7_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.15,2.3.12/rinex.csv
+Copied data/2024-09-11/scenario6_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/mon_rf.csv
+Copied data/2024-09-11/scenario6_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/nav_pvt.csv
+Copied data/2024-09-11/scenario6_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/rinex.csv
+Copied data/2024-09-11/scenario6_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/mon_rf.csv
+Copied data/2024-09-11/scenario6_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/nav_pvt.csv
+Copied data/2024-09-11/scenario6_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/rinex.csv
+Copied important file data/2024-09-11/scenario6_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/mon_rf.csv
+Copied important file data/2024-09-11/scenario6_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/nav_pvt.csv
+Copied important file data/2024-09-11/scenario6_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.10,2.3.11/rinex.csv
+Copied data/2024-09-11/scenario8_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/mon_rf.csv
+Copied data/2024-09-11/scenario8_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/nav_pvt.csv
+Copied data/2024-09-11/scenario8_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/rinex.csv
+Copied data/2024-09-11/scenario8_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/mon_rf.csv
+Copied data/2024-09-11/scenario8_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/nav_pvt.csv
+Copied data/2024-09-11/scenario8_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/rinex.csv
+Copied important file data/2024-09-11/scenario8_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/mon_rf.csv
+Copied important file data/2024-09-11/scenario8_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/nav_pvt.csv
+Copied important file data/2024-09-11/scenario8_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.13,2.3.15/rinex.csv
+Copied data/2024-09-11/scenario5_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/mon_rf.csv
+Copied data/2024-09-11/scenario5_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/nav_pvt.csv
+Copied data/2024-09-11/scenario5_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/rinex.csv
+Copied data/2024-09-11/scenario5_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/mon_rf.csv
+Copied data/2024-09-11/scenario5_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/nav_pvt.csv
+Copied data/2024-09-11/scenario5_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/rinex.csv
+Copied important file data/2024-09-11/scenario5_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/mon_rf.csv
+Copied important file data/2024-09-11/scenario5_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/nav_pvt.csv
+Copied important file data/2024-09-11/scenario5_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.5,2.3.8/rinex.csv
+Copied data/2024-09-11/scenario4_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/mon_rf.csv
+Copied data/2024-09-11/scenario4_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/nav_pvt.csv
+Copied data/2024-09-11/scenario4_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/rinex.csv
+Copied data/2024-09-11/scenario4_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/mon_rf.csv
+Copied data/2024-09-11/scenario4_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/nav_pvt.csv
+Copied data/2024-09-11/scenario4_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/rinex.csv
+Copied important file data/2024-09-11/scenario4_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/mon_rf.csv
+Copied important file data/2024-09-11/scenario4_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/nav_pvt.csv
+Copied important file data/2024-09-11/scenario4_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.3.2/rinex.csv
+Copied data/2024-09-11/scenario2_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/mon_rf.csv
+Copied data/2024-09-11/scenario2_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/nav_pvt.csv
+Copied data/2024-09-11/scenario2_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/rinex.csv
+Copied data/2024-09-11/scenario2_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/mon_rf.csv
+Copied data/2024-09-11/scenario2_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/nav_pvt.csv
+Copied data/2024-09-11/scenario2_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/rinex.csv
+Copied data/2024-09-11/scenario2_spoofing/240911_075843.ubx to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/240911_075843.ubx
+Copied important file data/2024-09-11/scenario2_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/mon_rf.csv
+Copied important file data/2024-09-11/scenario2_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/nav_pvt.csv
+Copied important file data/2024-09-11/scenario2_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_E1_L1/2.1.3,2.1.2,2.1.4/rinex.csv
+Copied data/2024-09-11/scenario1_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/mon_rf.csv
+Copied data/2024-09-11/scenario1_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/nav_pvt.csv
+Copied data/2024-09-11/scenario1_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/rinex.csv
+Copied data/2024-09-11/scenario1_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/mon_rf.csv
+Copied data/2024-09-11/scenario1_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/nav_pvt.csv
+Copied data/2024-09-11/scenario1_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/rinex.csv
+Copied data/2024-09-11/scenario1_spoofing/240911_065707.ubx to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/240911_065707.ubx
+Copied important file data/2024-09-11/scenario1_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/mon_rf.csv
+Copied important file data/2024-09-11/scenario1_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/nav_pvt.csv
+Copied important file data/2024-09-11/scenario1_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/stationary/Medium Power (_1W)/Bands_L1_L2_L5/2.1.1/rinex.csv
+Copied data/2024-09-11/scenario3_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/mon_rf.csv
+Copied data/2024-09-11/scenario3_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/nav_pvt.csv
+Copied data/2024-09-11/scenario3_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/rinex.csv
+Copied data/2024-09-11/scenario3_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/mon_rf.csv
+Copied data/2024-09-11/scenario3_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/nav_pvt.csv
+Copied data/2024-09-11/scenario3_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/rinex.csv
+Copied important file data/2024-09-11/scenario3_spoofing/mon_rf.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/mon_rf.csv
+Copied important file data/2024-09-11/scenario3_spoofing/nav_pvt.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/nav_pvt.csv
+Copied important file data/2024-09-11/scenario3_spoofing/rinex.csv to attack_scenarios_tree/Spoofing/dynamic/Medium Power (_1W)/Bands_E1_E5_L1_L2_L5/2.2.3,2.3.3/rinex.csv
+Copied data/2024-09-12/scenario11_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/mon_rf.csv
+Copied data/2024-09-12/scenario11_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/nav_pvt.csv
+Copied data/2024-09-12/scenario11_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/rinex.csv
+Copied data/2024-09-12/scenario11_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/mon_rf.csv
+Copied data/2024-09-12/scenario11_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/nav_pvt.csv
+Copied data/2024-09-12/scenario11_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/rinex.csv
+Copied important file data/2024-09-12/scenario11_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/mon_rf.csv
+Copied important file data/2024-09-12/scenario11_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/nav_pvt.csv
+Copied important file data/2024-09-12/scenario11_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.4/rinex.csv
+Copied data/2024-09-12/scenario12_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/mon_rf.csv
+Copied data/2024-09-12/scenario12_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/nav_pvt.csv
+Copied data/2024-09-12/scenario12_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/rinex.csv
+Copied data/2024-09-12/scenario12_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/mon_rf.csv
+Copied data/2024-09-12/scenario12_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/nav_pvt.csv
+Copied data/2024-09-12/scenario12_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/rinex.csv
+Copied important file data/2024-09-12/scenario12_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/mon_rf.csv
+Copied important file data/2024-09-12/scenario12_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/nav_pvt.csv
+Copied important file data/2024-09-12/scenario12_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.3/rinex.csv
+Copied data/2024-09-12/scenario10_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/mon_rf.csv
+Copied data/2024-09-12/scenario10_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/nav_pvt.csv
+Copied data/2024-09-12/scenario10_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/rinex.csv
+Copied data/2024-09-12/scenario10_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/mon_rf.csv
+Copied data/2024-09-12/scenario10_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/nav_pvt.csv
+Copied data/2024-09-12/scenario10_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/rinex.csv
+Copied data/2024-09-12/scenario10_spoofing/240912_084150.ubx to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/240912_084150.ubx
+Copied important file data/2024-09-12/scenario10_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/mon_rf.csv
+Copied important file data/2024-09-12/scenario10_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/nav_pvt.csv
+Copied important file data/2024-09-12/scenario10_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/dynamic/Low Power (_100mW)/Bands_L1/2.6.2/rinex.csv
+Copied data/2024-09-12/scenario9_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/mon_rf.csv
+Copied data/2024-09-12/scenario9_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/nav_pvt.csv
+Copied data/2024-09-12/scenario9_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/rinex.csv
+Copied data/2024-09-12/scenario9_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/mon_rf.csv
+Copied data/2024-09-12/scenario9_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/nav_pvt.csv
+Copied data/2024-09-12/scenario9_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/rinex.csv
+Copied important file data/2024-09-12/scenario9_spoofing/mon_rf.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/mon_rf.csv
+Copied important file data/2024-09-12/scenario9_spoofing/nav_pvt.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/nav_pvt.csv
+Copied important file data/2024-09-12/scenario9_spoofing/rinex.csv to attack_scenarios_tree/Jamming+Spoofing/stationary/Low Power (_100mW)/Bands_L1/2.6.1/rinex.csv
+Copied data/2024-09-10/scenario4_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/mon_rf.csv
+Copied data/2024-09-10/scenario4_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/nav_pvt.csv
+Copied data/2024-09-10/scenario4_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/rinex.csv
+Copied data/2024-09-10/scenario4_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/mon_rf.csv
+Copied data/2024-09-10/scenario4_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/nav_pvt.csv
+Copied data/2024-09-10/scenario4_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/rinex.csv
+Copied data/2024-09-10/scenario4_jamming/240910_085423_1_10_6_f9p.ubx to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/240910_085423_1_10_6_f9p.ubx
+Copied important file data/2024-09-10/scenario4_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/mon_rf.csv
+Copied important file data/2024-09-10/scenario4_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/nav_pvt.csv
+Copied important file data/2024-09-10/scenario4_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.6/rinex.csv
+Copied data/2024-09-10/scenario7_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/mon_rf.csv
+Copied data/2024-09-10/scenario7_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/nav_pvt.csv
+Copied data/2024-09-10/scenario7_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/rinex.csv
+Copied data/2024-09-10/scenario7_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/mon_rf.csv
+Copied data/2024-09-10/scenario7_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/nav_pvt.csv
+Copied data/2024-09-10/scenario7_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/rinex.csv
+Copied data/2024-09-10/scenario7_jamming/240910_151737_custom2_f9p.ubx to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/240910_151737_custom2_f9p.ubx
+Copied important file data/2024-09-10/scenario7_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/mon_rf.csv
+Copied important file data/2024-09-10/scenario7_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/nav_pvt.csv
+Copied important file data/2024-09-10/scenario7_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 2/rinex.csv
+Copied data/2024-09-10/scenario3_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/mon_rf.csv
+Copied data/2024-09-10/scenario3_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/nav_pvt.csv
+Copied data/2024-09-10/scenario3_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/rinex.csv
+Copied data/2024-09-10/scenario3_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/mon_rf.csv
+Copied data/2024-09-10/scenario3_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/nav_pvt.csv
+Copied data/2024-09-10/scenario3_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/rinex.csv
+Copied important file data/2024-09-10/scenario3_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/mon_rf.csv
+Copied important file data/2024-09-10/scenario3_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/nav_pvt.csv
+Copied important file data/2024-09-10/scenario3_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7/rinex.csv
+Copied data/2024-09-10/scenario2_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/mon_rf.csv
+Copied data/2024-09-10/scenario2_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/nav_pvt.csv
+Copied data/2024-09-10/scenario2_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/rinex.csv
+Copied data/2024-09-10/scenario2_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/mon_rf.csv
+Copied data/2024-09-10/scenario2_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/nav_pvt.csv
+Copied data/2024-09-10/scenario2_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/rinex.csv
+Copied data/2024-09-10/scenario2_meaconing/240910_072935.ubx to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/240910_072935.ubx
+Copied important file data/2024-09-10/scenario2_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/mon_rf.csv
+Copied important file data/2024-09-10/scenario2_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/nav_pvt.csv
+Copied important file data/2024-09-10/scenario2_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4/rinex.csv
+Copied data/2024-09-10/scenario6_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/mon_rf.csv
+Copied data/2024-09-10/scenario6_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/nav_pvt.csv
+Copied data/2024-09-10/scenario6_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/rinex.csv
+Copied data/2024-09-10/scenario6_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/mon_rf.csv
+Copied data/2024-09-10/scenario6_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/nav_pvt.csv
+Copied data/2024-09-10/scenario6_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/rinex.csv
+Copied data/2024-09-10/scenario6_jamming/240910_144100_custom1_f9p.ubx to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/240910_144100_custom1_f9p.ubx
+Copied important file data/2024-09-10/scenario6_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/mon_rf.csv
+Copied important file data/2024-09-10/scenario6_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/nav_pvt.csv
+Copied important file data/2024-09-10/scenario6_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/custom 1/rinex.csv
+Copied data/2024-09-10/scenario1_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/mon_rf.csv
+Copied data/2024-09-10/scenario1_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/nav_pvt.csv
+Copied data/2024-09-10/scenario1_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/rinex.csv
+Copied data/2024-09-10/scenario1_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/mon_rf.csv
+Copied data/2024-09-10/scenario1_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/nav_pvt.csv
+Copied data/2024-09-10/scenario1_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/rinex.csv
+Copied data/2024-09-10/scenario1_meaconing/240910_065956.ubx to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/240910_065956.ubx
+Copied important file data/2024-09-10/scenario1_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/mon_rf.csv
+Copied important file data/2024-09-10/scenario1_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/nav_pvt.csv
+Copied important file data/2024-09-10/scenario1_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2/rinex.csv
+Copied data/2024-09-10/scenario5_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/mon_rf.csv
+Copied data/2024-09-10/scenario5_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/nav_pvt.csv
+Copied data/2024-09-10/scenario5_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/rinex.csv
+Copied data/2024-09-10/scenario5_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/mon_rf.csv
+Copied data/2024-09-10/scenario5_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/nav_pvt.csv
+Copied data/2024-09-10/scenario5_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/rinex.csv
+Copied data/2024-09-10/scenario5_jamming/240910_135736_1.10.4_f9p.ubx to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/240910_135736_1.10.4_f9p.ubx
+Copied important file data/2024-09-10/scenario5_jamming/mon_rf.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/mon_rf.csv
+Copied important file data/2024-09-10/scenario5_jamming/nav_pvt.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/nav_pvt.csv
+Copied important file data/2024-09-10/scenario5_jamming/rinex.csv to attack_scenarios_tree/Jamming/dynamic/High Power (_10W)/Bands_E1_E5_E5a_E5b_E6_L1_L2_L3_L5/1.10.4/rinex.csv
+Copied data/2024-09-10/scenario5_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/mon_rf.csv
+Copied data/2024-09-10/scenario5_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/nav_pvt.csv
+Copied data/2024-09-10/scenario5_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/rinex.csv
+Copied data/2024-09-10/scenario5_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/mon_rf.csv
+Copied data/2024-09-10/scenario5_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/nav_pvt.csv
+Copied data/2024-09-10/scenario5_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/rinex.csv
+Copied important file data/2024-09-10/scenario5_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/mon_rf.csv
+Copied important file data/2024-09-10/scenario5_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/nav_pvt.csv
+Copied important file data/2024-09-10/scenario5_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/rinex.csv
+Copied data/2024-09-10/scenario4_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/mon_rf.csv
+Copied data/2024-09-10/scenario4_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/nav_pvt.csv
+Copied data/2024-09-10/scenario4_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/rinex.csv
+Copied data/2024-09-10/scenario4_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/mon_rf.csv
+Copied data/2024-09-10/scenario4_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/nav_pvt.csv
+Copied data/2024-09-10/scenario4_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/rinex.csv
+Copied important file data/2024-09-10/scenario4_meaconing/mon_rf.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/mon_rf.csv
+Copied important file data/2024-09-10/scenario4_meaconing/nav_pvt.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/nav_pvt.csv
+Copied important file data/2024-09-10/scenario4_meaconing/rinex.csv to attack_scenarios_tree/Meaconing/dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8/rinex.csv

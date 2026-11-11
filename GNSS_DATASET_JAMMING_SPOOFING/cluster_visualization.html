@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNSS Attack Scenario Visualization</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f5f7fa;
+            --panel-bg: #ffffff;
+            --border-color: #dbe2e8;
+            --jamming-color: #e74c3c;
+            --spoofing-color: #3498db;
+            --meaconing-color: #9b59b6;
+            --combined-color: #f39c12;
+            --hover-color: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: var(--panel-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        
+        .subtitle {
+            margin-top: 5px;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .controls {
+            display: flex;
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .file-input {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .export-dialog {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .export-dialog.show {
+            display: block;
+        }
+
+        .export-dialog-content {
+            background-color: white;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .export-dialog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .export-dialog-header h3 {
+            margin: 0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .export-preset {
+            margin: 15px 0;
+        }
+
+        .preset-btn {
+            padding: 6px 12px;
+            margin-right: 10px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .preset-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .export-option {
+            margin: 10px 0;
+        }
+
+        .export-option label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .export-option input {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .option-help {
+            display: block;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .export-buttons {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .export-btn {
+            padding: 8px 16px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .export-btn:hover {
+            background-color: #2980b9;
+        }
+        .file-input label {
+            margin-right: 10px;
+            font-weight: 500;
+        }
+        
+        .file-input input[type="file"] {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: white;
+        }
+        
+        .view-options {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .view-btn {
+            padding: 8px 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        
+        .view-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .view-btn.active {
+            background-color: var(--primary-color);
+        }
+        
+        .main-content {
+            display: flex;
+            min-height: 800px;
+        }
+        
+        .visualization-container {
+            flex: 7;
+            overflow: hidden;
+            position: relative;
+            border-right: 1px solid var(--border-color);
+            height: 800px; /* Fixed height for visualization */
+        }
+        
+        #tree-container {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        
+        .details-panel {
+            flex: 3;
+            padding: 20px;
+            overflow-y: auto;
+            height: 800px; /* Match the height of visualization */
+        }
+        
+        .panel-section {
+            margin-bottom: 25px;
+        }
+        
+        .panel-heading {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--primary-color);
+        }
+        
+        .node-info {
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .scenario-item {
+            margin-bottom: 8px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .scenario-item:hover {
+            background-color: var(--hover-color);
+        }
+        
+        .scenario-detail {
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .property-group {
+            margin-bottom: 12px;
+        }
+        
+        .property-name {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 3px;
+        }
+        
+        .property-value {
+            padding-left: 10px;
+            word-break: break-word;
+        }
+        
+        /* D3 Tree Styling */
+        .node circle {
+            stroke-width: 2px;
+        }
+        
+        .node.attack-type circle {
+            fill: var(--primary-color);
+            r: 10;
+        }
+        
+        .node.rover-state circle {
+            fill: var(--secondary-color);
+            r: 9;
+        }
+        
+        .node.power-category circle {
+            fill: #2ecc71;
+            r: 8;
+        }
+        
+        .node.bands circle {
+            fill: #f1c40f;
+            r: 7;
+        }
+        
+        .node.scenario circle {
+            fill: #e74c3c;
+            r: 6;
+        }
+        
+        .node text {
+            font: 12px sans-serif;
+            fill: #333;
+        }
+        
+        .node.attack-type text {
+            font-weight: bold;
+        }
+        
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1.5px;
+        }
+        
+        /* Enhanced breadcrumb navigation */
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .breadcrumb-item {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
+        .breadcrumb-item:not(:last-child)::after {
+            content: ">";
+            margin-left: 5px;
+            color: #999;
+        }
+        
+        .breadcrumb-link {
+            color: var(--secondary-color);
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .breadcrumb-link:hover {
+            background-color: var(--hover-color);
+        }
+        
+        .breadcrumb-current {
+            font-weight: 500;
+        }
+        
+        /* Stats styling */
+        .stats-container {
+            padding: 20px;
+            background-color: var(--panel-bg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        .stats-table th, 
+        .stats-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #e1e5e9;
+        }
+        
+        .stats-table th {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+        }
+        
+        .stats-table tr:hover td {
+            background-color: var(--hover-color);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: white;
+            margin-right: 5px;
+        }
+        
+        .badge-jamming {
+            background-color: var(--jamming-color);
+        }
+        
+        .badge-spoofing {
+            background-color: var(--spoofing-color);
+        }
+        
+        .badge-meaconing {
+            background-color: var(--meaconing-color);
+        }
+        
+        .badge-combined {
+            background-color: var(--combined-color);
+        }
+        
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        /* JSON view */
+        #json-container {
+            display: none;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow: auto;
+            max-height: 700px;
+            width: 100%;
+        }
+        
+        /* Loading indicator */
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--secondary-color);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .tooltip {
+            position: absolute;
+            padding: 8px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            pointer-events: none;
+            font-size: 0.85rem;
+            max-width: 200px;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .visualization-container, 
+            .details-panel {
+                width: 100%;
+                max-height: none;
+            }
+            
+            .visualization-container {
+                height: 500px;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .file-input {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .file-input label {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GNSS Attack Scenario Visualization</h1>
+            <div class="subtitle">Hierarchical visualization of GNSS attack scenarios by type, rover state, power, and frequency bands</div>
+        </header>
+        
+        <div class="controls">
+            <div class="file-input">
+                <label for="json-file">Upload JSON file:</label>
+                <input type="file" id="json-file" accept=".json">
+            </div>
+            
+            <div class="view-options">
+                <button id="tree-view-btn" class="view-btn active">Tree View</button>
+                <button id="json-view-btn" class="view-btn">JSON View</button>
+                <button id="export-png-btn" class="view-btn">Export as PNG</button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="visualization-container">
+                <div id="tree-container"></div>
+                <div id="json-container"></div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--primary-color);"></div>
+                        <span>Attack Type</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--secondary-color);"></div>
+                        <span>Rover State</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #2ecc71;"></div>
+                        <span>Power Category</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #f1c40f;"></div>
+                        <span>Frequency Bands</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #e74c3c;"></div>
+                        <span>Scenario</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="details-panel">
+                <div class="panel-section">
+                    <div class="panel-heading">Node Details</div>
+                    <div id="breadcrumb-nav" class="breadcrumb">
+                        <div class="breadcrumb-item breadcrumb-current">Upload JSON file to start</div>
+                    </div>
+                    <div id="node-details" class="node-info">
+                        <p>Upload JSON file and select a node to view details</p>
+                    </div>
+                </div>
+                
+                <div class="panel-section">
+                    <div class="panel-heading">Scenarios</div>
+                    <div id="scenarios-list">No scenarios to display</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="panel-heading">Attack Type Statistics</div>
+            <div id="stats-table-container">
+                <p>Upload JSON file to view statistics</p>
+            </div>
+        </div>
+        
+        <div class="export-dialog" id="export-dialog">
+            <div class="export-dialog-content">
+                <div class="export-dialog-header">
+                    <h3>Export Options</h3>
+                    <button class="close-btn" id="close-export-dialog">&times;</button>
+                </div>
+                <div class="export-dialog-body">
+                    <div class="export-preset">
+                        <button id="a4-landscape" class="preset-btn">A4 Landscape</button>
+                        <button id="a4-portrait" class="preset-btn">A4 Portrait</button>
+                        <button id="a3-landscape" class="preset-btn">A3 Landscape</button>
+                    </div>
+                    <div class="export-option">
+                        <label for="export-width">Image Width (px):</label>
+                        <input type="number" id="export-width" value="3508" min="1000" max="10000">
+                        <span class="option-help">A4 landscape width at 300dpi</span>
+                    </div>
+                    <div class="export-option">
+                        <label for="export-height">Image Height (px):</label>
+                        <input type="number" id="export-height" value="2480" min="1000" max="10000">
+                        <span class="option-help">A4 landscape height at 300dpi</span>
+                    </div>
+                    <div class="export-option">
+                        <label for="export-filename">Filename:</label>
+                        <input type="text" id="export-filename" value="gnss-attack-tree.png">
+                    </div>
+                    <div class="export-option">
+                        <label for="export-scale">Scale Factor:</label>
+                        <input type="number" id="export-scale" value="2" min="1" max="5" step="0.5">
+                        <span class="option-help">Higher values = sharper image</span>
+                    </div>
+                    <div class="export-option">
+                        <label>
+                            <input type="checkbox" id="export-transparent">
+                            Transparent Background
+                        </label>
+                        <span class="option-help">Uncheck for white background (better for printing)</span>
+                    </div>
+                    <div class="export-buttons">
+                        <button id="download-png-btn" class="export-btn">Download PNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        // Global variables
+        let treeData = null;
+        let currentNode = null;
+        let breadcrumbHistory = [];
+        let tooltip = null;
+
+        // Initialize the visualization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create tooltip div
+            tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+            
+            // Set up event listeners
+            document.getElementById('json-file').addEventListener('change', handleFileUpload);
+            document.getElementById('tree-view-btn').addEventListener('click', showTreeView);
+            document.getElementById('json-view-btn').addEventListener('click', showJsonView);
+            document.getElementById('export-png-btn').addEventListener('click', showExportDialog);
+            document.getElementById('close-export-dialog').addEventListener('click', hideExportDialog);
+            document.getElementById('download-png-btn').addEventListener('click', exportAsPNG);
+            
+            // Add paper format preset buttons
+            document.getElementById('a4-landscape').addEventListener('click', () => {
+                document.getElementById('export-width').value = '3508';
+                document.getElementById('export-height').value = '2480';
+            });
+            
+            document.getElementById('a4-portrait').addEventListener('click', () => {
+                document.getElementById('export-width').value = '2480';
+                document.getElementById('export-height').value = '3508';
+            });
+            
+            document.getElementById('a3-landscape').addEventListener('click', () => {
+                document.getElementById('export-width').value = '4961';
+                document.getElementById('export-height').value = '3508';
+            });
+        });
+
+        // Handle file upload
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            showLoading(true);
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    treeData = JSON.parse(e.target.result);
+                    
+                    // Initialize the visualization
+                    renderTreeVisualization(treeData);
+                    displayJsonView(treeData);
+                    generateStatistics(treeData);
+                    
+                    // Update the breadcrumb
+                    updateBreadcrumb([{ name: "Root", data: treeData }]);
+                    
+                    // Show tree view by default
+                    showTreeView();
+                } catch (error) {
+                    console.error("Error parsing JSON file:", error);
+                    alert("Error parsing JSON file. Please make sure it's a valid JSON format.");
+                } finally {
+                    showLoading(false);
+                }
+            };
+            
+            reader.onerror = function() {
+                alert("Error reading file.");
+                showLoading(false);
+            };
+            
+            reader.readAsText(file);
+        }
+
+        // Toggle between tree and JSON views
+        function showTreeView() {
+            document.getElementById('tree-container').style.display = 'block';
+            document.getElementById('json-container').style.display = 'none';
+            document.getElementById('tree-view-btn').classList.add('active');
+            document.getElementById('json-view-btn').classList.remove('active');
+        }
+
+        function showJsonView() {
+            document.getElementById('tree-container').style.display = 'none';
+            document.getElementById('json-container').style.display = 'block';
+            document.getElementById('tree-view-btn').classList.remove('active');
+            document.getElementById('json-view-btn').classList.add('active');
+        }
+
+        // Show export dialog
+        function showExportDialog() {
+            document.getElementById('export-dialog').classList.add('show');
+        }
+
+        // Hide export dialog
+        function hideExportDialog() {
+            document.getElementById('export-dialog').classList.remove('show');
+        }
+
+        // Export the tree visualization as PNG
+        function exportAsPNG() {
+            const width = parseInt(document.getElementById('export-width').value);
+            const height = parseInt(document.getElementById('export-height').value);
+            const filename = document.getElementById('export-filename').value || 'gnss-attack-tree.png';
+            const scale = parseFloat(document.getElementById('export-scale').value);
+            const transparent = true; // Always use transparency
+            
+            // Show loading indicator
+            showLoading(true);
+            
+            // Get the original SVG
+            const svgElement = document.getElementById('tree-svg');
+            
+            // Get original dimensions
+            const originalSVGWidth = parseFloat(svgElement.getAttribute('width'));
+            const originalSVGHeight = parseFloat(svgElement.getAttribute('height'));
+            
+            // Clone the SVG
+            const clonedSvg = svgElement.cloneNode(true);
+            
+            // Set viewBox to original dimensions for proper scaling
+            clonedSvg.setAttribute('viewBox', `0 0 ${originalSVGWidth} ${originalSVGHeight}`);
+            
+            // Set width and height to target dimensions
+            clonedSvg.setAttribute('width', width);
+            clonedSvg.setAttribute('height', height);
+            clonedSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+            
+            // Make background transparent
+            const bgRect = clonedSvg.querySelector('rect');
+            if (bgRect) {
+                bgRect.setAttribute('fill', 'none');
+            }
+            
+            // Create a temporary container for the cloned SVG
+            const container = document.createElement('div');
+            container.style.position = 'absolute';
+            container.style.top = '-9999px';
+            container.style.left = '-9999px';
+            container.style.width = width + 'px';
+            container.style.height = height + 'px';
+            container.appendChild(clonedSvg);
+            document.body.appendChild(container);
+            
+            // Use html2canvas to convert the container to canvas
+            html2canvas(container, {
+                scale: scale,
+                backgroundColor: null, // Set to null for transparency
+                width: width,
+                height: height,
+                useCORS: true
+            }).then(canvas => {
+                // Convert canvas to PNG
+                const imgData = canvas.toDataURL('image/png');
+                
+                // Create download link
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = imgData;
+                link.click();
+                
+                // Clean up
+                document.body.removeChild(container);
+                showLoading(false);
+                hideExportDialog();
+            }).catch(err => {
+                console.error('Error exporting image:', err);
+                alert('Error exporting image. Please try again with different settings.');
+                document.body.removeChild(container);
+                showLoading(false);
+            });
+        }
+        // Add legend to export SVG
+        function addLegendToExport(svg, width, height) {
+            const legendGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            legendGroup.setAttribute('transform', `translate(${width - 250}, ${height - 180})`);
+            
+            // Legend background
+            const legendBg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            legendBg.setAttribute('x', 0);
+            legendBg.setAttribute('y', 0);
+            legendBg.setAttribute('width', 200);
+            legendBg.setAttribute('height', 150);
+            legendBg.setAttribute('fill', 'white');
+            legendBg.setAttribute('stroke', '#ccc');
+            legendBg.setAttribute('rx', 5);
+            legendGroup.appendChild(legendBg);
+            
+            // Legend title
+            const legendTitle = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            legendTitle.setAttribute('x', 100);
+            legendTitle.setAttribute('y', 25);
+            legendTitle.setAttribute('text-anchor', 'middle');
+            legendTitle.setAttribute('font-size', '16px');
+            legendTitle.setAttribute('font-weight', 'bold');
+            legendTitle.textContent = 'Legend';
+            legendGroup.appendChild(legendTitle);
+            
+            // Legend items
+            const items = [
+                { color: '#2c3e50', label: 'Attack Type' },
+                { color: '#3498db', label: 'Rover State' },
+                { color: '#2ecc71', label: 'Power Category' },
+                { color: '#f1c40f', label: 'Frequency Bands' },
+                { color: '#e74c3c', label: 'Scenario' }
+            ];
+            
+            items.forEach((item, index) => {
+                // Circle
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute('cx', 20);
+                circle.setAttribute('cy', 50 + index * 20);
+                circle.setAttribute('r', 6);
+                circle.setAttribute('fill', item.color);
+                legendGroup.appendChild(circle);
+                
+                // Label
+                const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                label.setAttribute('x', 35);
+                label.setAttribute('y', 55 + index * 20);
+                label.setAttribute('font-size', '14px');
+                label.textContent = item.label;
+                legendGroup.appendChild(label);
+            });
+            
+            svg.appendChild(legendGroup);
+        }
+
+        // Display the JSON in a formatted view
+        function displayJsonView(data) {
+            const container = document.getElementById('json-container');
+            container.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
+        }
+
+        // Syntax highlighting for JSON
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                let cls = 'number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'key';
+                        match = '<span style="color: #2980b9;">' + match + '</span>';
+                    } else {
+                        cls = 'string';
+                        match = '<span style="color: #27ae60;">' + match + '</span>';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'boolean';
+                    match = '<span style="color: #8e44ad;">' + match + '</span>';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                    match = '<span style="color: #7f8c8d;">' + match + '</span>';
+                } else {
+                    match = '<span style="color: #e67e22;">' + match + '</span>';
+                }
+                return match;
+            });
+        }
+
+        // Render the tree visualization using D3
+        function renderTreeVisualization(data) {
+            // Clear previous visualization
+            const treeContainer = document.getElementById('tree-container');
+            treeContainer.innerHTML = '';
+            
+            // Set up dimensions with much more space
+            const margin = {top: 60, right: 180, bottom: 60, left: 180};
+            const width = Math.max(treeContainer.clientWidth - margin.left - margin.right, 1600);
+            const height = 1200 - margin.top - margin.bottom; // Reduced height
+            
+            // Create SVG element with zoom functionality
+            const svg = d3.select(treeContainer)
+                .append("svg")
+                .attr("id", "tree-svg") // Add ID for export functionality
+                .attr("width", width + margin.right + margin.left)
+                .attr("height", height + margin.top + margin.bottom)
+                .call(d3.zoom().on("zoom", (event) => {
+                    mainGroup.attr("transform", event.transform);
+                }))
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+            
+            // Add a background rect to catch zoom events
+            svg.append("rect")
+                .attr("width", width)
+                .attr("height", height)
+                .attr("fill", "none") // Transparent background
+                .attr("pointer-events", "all");
+                
+            // Create a main group for all tree elements that will be zoomed
+            const mainGroup = svg.append("g");
+            
+            // Create a hierarchy from the data
+            const root = d3.hierarchy(data, d => d.children);
+            
+            // Calculate the tree layout - horizontal layout
+            const treeLayout = d3.tree()
+                .size([height, width * 0.9]) // Use height for vertical spread, width for horizontal
+                .separation((a, b) => (a.parent === b.parent ? 1.5 : 2)); 
+            
+            // Compute the tree layout
+            const treeData = treeLayout(root);
+            
+            // Add links between nodes
+            mainGroup.selectAll(".link")
+                .data(treeData.links())
+                .enter()
+                .append("path")
+                .attr("class", "link")
+                .attr("d", d3.linkHorizontal()
+                    .x(d => d.y)
+                    .y(d => d.x)
+                );
+            
+            // Create a group for each node
+            const nodeGroups = mainGroup.selectAll(".node")
+                .data(treeData.descendants())
+                .enter()
+                .append("g")
+                .attr("class", d => {
+                    let nodeClass = "node";
+                    
+                    // Determine node type based on depth or properties
+                    if (d.depth === 0) nodeClass += " root";
+                    else if (d.depth === 1) nodeClass += " attack-type";
+                    else if (d.depth === 2) nodeClass += " rover-state";
+                    else if (d.depth === 3) nodeClass += " power-category";
+                    else if (d.depth === 4) nodeClass += " bands";
+                    else nodeClass += " scenario";
+                    
+                    return nodeClass;
+                })
+                .attr("transform", d => `translate(${d.y},${d.x})`)
+                .on("click", handleNodeClick)
+                .on("mouseover", handleNodeMouseOver)
+                .on("mouseout", handleNodeMouseOut);
+            
+            // Add circles to nodes
+            nodeGroups.append("circle");
+            
+            // Add rectangle backgrounds to improve text readability
+            nodeGroups.append("rect")
+                .attr("x", 10) // Position text to the right of the node
+                .attr("y", -14) // Center vertically (adjusted for larger font)
+                .attr("width", d => {
+                    // Adjust width based on text length with maximum limits
+                    const name = d.data.name || "";
+                    // Scenario IDs are typically short
+                    if (d.depth === 5) return 60; 
+                    // Band labels need more space but still limited
+                    if (d.depth === 4) return Math.min(name.length * 8, 200);
+                    // Other levels
+                    return Math.min(name.length * 8.5, 240);
+                })
+                .attr("height", 30) // Increased height for larger font
+                .attr("rx", 4)
+                .attr("ry", 4)
+                .attr("fill", "white")
+                .attr("fill-opacity", 0.9)
+                .attr("stroke", "#e0e0e0")
+                .attr("stroke-width", 1);
+            
+            // Add text labels to nodes - to the right of circles in horizontal layout
+            nodeGroups.append("text")
+                .attr("dy", ".35em")
+                .attr("x", 15) // Right of the node
+                .attr("y", 0) // Centered vertically
+                .attr("text-anchor", "start")
+                .style("font-size", d => d.depth >= 5 ? "14px" : (d.depth == 4 ? "13px" : "15px")) // Larger font sizes
+                .style("font-weight", d => d.depth <= 2 ? "bold" : "normal") // Bold text for top levels
+                .text(d => {
+                    const name = d.data.name;
+                    if (!name) return "";
+                    
+                    // Truncate text based on node type
+                    if (d.depth === 5) { // Scenario IDs - shortest
+                        return name;
+                    } else if (d.depth === 4) { // Band labels - medium truncation
+                        if (name.startsWith("Bands:")) {
+                            const bands = name.substring(7); // Remove "Bands: " prefix
+                            if (bands.length > 18) return "Bands: " + bands.substring(0, 15) + "...";
+                            return name;
+                        }
+                        if (name.length > 22) return name.substring(0, 19) + "...";
+                        return name;
+                    } else if (name.length > 28) { // Other levels - longest allowed
+                        return name.substring(0, 25) + "...";
+                    }
+                    return name;
+                });
+            
+            // Add instructions text
+            svg.append("text")
+                .attr("x", 10)
+                .attr("y", -30)
+                .attr("class", "instructions")
+                .attr("text-anchor", "start")
+                .text("");
+        }
+
+        // Handle node click event
+        function handleNodeClick(event, d) {
+            currentNode = d;
+            
+            // Update breadcrumb trail
+            const pathToNode = getPathToNode(d);
+            updateBreadcrumb(pathToNode);
+            
+            // Display node details
+            displayNodeDetails(d);
+            
+            // Highlight the selected node
+            d3.selectAll(".node circle").style("stroke", null);
+            d3.select(event.currentTarget).select("circle").style("stroke", "#e74c3c").style("stroke-width", 3);
+            
+            // Display scenarios if applicable
+            if (d.depth <= 4) {
+                displayScenariosInNode(d);
+            } else {
+                // If it's a scenario node, just show its details
+                document.getElementById('scenarios-list').innerHTML = `
+                    <div class="scenario-detail">
+                        <div class="property-group">
+                            <div class="property-name">Selected Scenario</div>
+                            <div class="property-value">${d.data.name}</div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Handle node mouseover event
+        function handleNodeMouseOver(event, d) {
+            // Show tooltip
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            
+            let tooltipContent = `<strong>${d.data.name}</strong>`;
+            
+            if (d.data.count) {
+                tooltipContent += `<br>Items: ${d.data.count}`;
+            }
+            
+            tooltip.html(tooltipContent)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
+            
+            // Highlight the node
+            d3.select(this).select("circle")
+                .transition()
+                .duration(200)
+                .attr("r", function() {
+                    return parseFloat(this.getAttribute("r")) * 1.2;
+                });
+        }
+
+        // Handle node mouseout event
+        function handleNodeMouseOut(event, d) {
+            // Hide tooltip
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+            
+            // Return node to normal size unless it's the selected node
+            if (!currentNode || d.data !== currentNode.data) {
+                d3.select(this).select("circle")
+                    .transition()
+                    .duration(200)
+                    .attr("r", null); // Reset to the CSS-defined radius
+            }
+        }
+
+        // Get the path from root to the current node
+        function getPathToNode(node) {
+            const path = [];
+            let current = node;
+            
+            while (current) {
+                path.unshift({
+                    name: current.data.name,
+                    data: current.data,
+                    node: current
+                });
+                current = current.parent;
+            }
+            
+            return path;
+        }
+
+        // Update the breadcrumb navigation
+        function updateBreadcrumb(path) {
+            breadcrumbHistory = path;
+            
+            const breadcrumb = document.getElementById('breadcrumb-nav');
+            breadcrumb.innerHTML = '';
+            
+            path.forEach((item, index) => {
+                const isLast = index === path.length - 1;
+                const element = document.createElement('div');
+                element.className = 'breadcrumb-item';
+                
+                if (isLast) {
+                    element.innerHTML = `<span class="breadcrumb-current">${item.name}</span>`;
+                } else {
+                    element.innerHTML = `<span class="breadcrumb-link">${item.name}</span>`;
+                    element.querySelector('.breadcrumb-link').addEventListener('click', () => {
+                        // Simulate clicking on this node in the visualization
+                        const event = { currentTarget: d3.select(`.node:nth-child(${index + 1})`).node() };
+                        handleNodeClick(event, item.node);
+                    });
+                }
+                
+                breadcrumb.appendChild(element);
+            });
+        }
+
+        // Display details for the selected node
+        function displayNodeDetails(node) {
+            const detailsContainer = document.getElementById('node-details');
+            let html = '';
+            
+            const data = node.data;
+            
+            if (node.depth === 0) {
+                // Root node
+                html = `
+                    <div class="property-group">
+                        <div class="property-name">Root Node</div>
+                        <div class="property-value">Containing all GNSS attack scenarios</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-name">Total Scenarios</div>
+                        <div class="property-value">${getTotalScenarios(data)}</div>
+                    </div>
+                `;
+            } else {
+                // Display name and type
+                html = `
+                    <div class="property-group">
+                        <div class="property-name">Name</div>
+                        <div class="property-value">${data.name}</div>
+                    </div>
+                `;
+                
+                // Add type-specific details
+                if (node.depth === 1) {
+                    // Attack Type
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">Type</div>
+                            <div class="property-value">Attack Type</div>
+                        </div>
+                    `;
+                } else if (node.depth === 2) {
+                    // Rover State
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">Type</div>
+                            <div class="property-value">Rover State</div>
+                        </div>
+                    `;
+                } else if (node.depth === 3) {
+                    // Power Category
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">Type</div>
+                            <div class="property-value">Power Category</div>
+                        </div>
+                    `;
+                } else if (node.depth === 4) {
+                    // Bands
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">Type</div>
+                            <div class="property-value">Frequency Bands</div>
+                        </div>
+                    `;
+                } else {
+                    // Scenario node
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">Type</div>
+                            <div class="property-value">Scenario</div>
+                        </div>
+                    `;
+                    
+                    // Add all scenario properties
+                    for (const [key, value] of Object.entries(data)) {
+                        if (key !== 'name' && key !== 'children' && key !== 'shape' && key !== 'type' && key !== 'size') {
+                            html += `
+                                <div class="property-group">
+                                    <div class="property-name">${capitalizeFirstLetter(key)}</div>
+                                    <div class="property-value">${value}</div>
+                                </div>
+                            `;
+                        }
+                    }
+                }
+                
+                // Add count info if available
+                if (data.count) {
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">Contains</div>
+                            <div class="property-value">${data.count} item${data.count !== 1 ? 's' : ''}</div>
+                        </div>
+                    `;
+                }
+            }
+            
+            detailsContainer.innerHTML = html;
+        }
+
+        // Display scenarios contained within a node
+        function displayScenariosInNode(node) {
+            const scenariosList = document.getElementById('scenarios-list');
+            let scenarios = [];
+            
+            // Find all scenario nodes in this subtree
+            if (node.data.children) {
+                // Recursive function to find all scenario nodes
+                function findScenarios(node) {
+                    // If this is a leaf node with shape="circle", it's a scenario
+                    if (node.shape === "circle" || node.type === "scenario") {
+                        return [node];
+                    }
+                    
+                    // If this node has children, search them
+                    if (node.children) {
+                        let results = [];
+                        for (const child of node.children) {
+                            results = results.concat(findScenarios(child));
+                        }
+                        return results;
+                    }
+                    
+                    return [];
+                }
+                
+                // Find all scenarios in this node's subtree
+                scenarios = findScenarios(node.data);
+            }
+            
+            // Display scenarios or a message if none found
+            if (scenarios.length > 0) {
+                let html = '';
+                
+                scenarios.forEach(scenario => {
+                    html += `
+                        <div class="scenario-item" data-id="${scenario.name}">
+                            <div class="property-name">${scenario.name}</div>
+                            <div class="property-value">
+                                ${scenario.attack_type ? 'Type: ' + scenario.attack_type : ''}
+                                ${scenario.power ? ' | Power: ' + scenario.power : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                scenariosList.innerHTML = html;
+                
+                // Add click handlers to scenario items
+                document.querySelectorAll('.scenario-item').forEach(item => {
+                    item.addEventListener('click', function() {
+                        const scenarioId = this.getAttribute('data-id');
+                        const scenario = scenarios.find(s => s.name === scenarioId);
+                        
+                        if (scenario) {
+                            displayScenarioDetails(scenario);
+                        }
+                    });
+                });
+            } else {
+                // If at leaf node, show message
+                if (node.depth >= 4) {
+                    scenariosList.innerHTML = '<p>No scenarios found at this level</p>';
+                } else {
+                    scenariosList.innerHTML = '<p>Select a leaf node to view scenarios</p>';
+                }
+            }
+        }
+
+        // Display detailed information for a specific scenario
+        function displayScenarioDetails(scenario) {
+            const detailsContainer = document.getElementById('node-details');
+            
+            let html = `
+                <div class="property-group">
+                    <div class="property-name">Scenario ID</div>
+                    <div class="property-value">${scenario.name}</div>
+                </div>
+            `;
+            
+            // Display all properties of the scenario
+            for (const [key, value] of Object.entries(scenario)) {
+                if (key !== 'name' && key !== 'children' && key !== 'shape' && key !== 'type' && key !== 'size') {
+                    html += `
+                        <div class="property-group">
+                            <div class="property-name">${capitalizeFirstLetter(key)}</div>
+                            <div class="property-value">${value}</div>
+                        </div>
+                    `;
+                }
+            }
+            
+            detailsContainer.innerHTML = html;
+        }
+
+        // Generate statistics from the tree data
+        function generateStatistics(data) {
+            const container = document.getElementById('stats-table-container');
+            
+            if (!data || !data.children || data.children.length === 0) {
+                container.innerHTML = '<p>No data available for statistics</p>';
+                return;
+            }
+            
+            // Get statistics for each attack type
+            const stats = data.children.map(attackType => {
+                const roverStates = new Set();
+                const bands = new Set();
+                let scenarios = 0;
+                
+                // Count unique rover states and bands
+                function countLeafNodes(node) {
+                    if (node.children) {
+                        node.children.forEach(child => {
+                            if (child.name && child.name.includes('stationary') || child.name.includes('dynamic')) {
+                                roverStates.add(child.name);
+                            }
+                            
+                            if (child.name && child.name.includes('Bands:')) {
+                                bands.add(child.name.replace('Bands: ', ''));
+                            }
+                            
+                            countLeafNodes(child);
+                        });
+                    } else {
+                        // This is a scenario leaf node
+                        scenarios++;
+                    }
+                }
+                
+                countLeafNodes(attackType);
+                
+                return {
+                    attackType: attackType.name,
+                    count: scenarios,
+                    roverStates: Array.from(roverStates),
+                    bands: Array.from(bands)
+                };
+            });
+            
+            // Create a table with the statistics
+            let html = `
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Attack Type</th>
+                            <th>Count</th>
+                            <th>Rover States</th>
+                            <th>Frequency Bands</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            stats.forEach(stat => {
+                html += `
+                    <tr>
+                        <td>
+                            <span class="badge badge-${getBadgeClass(stat.attackType)}">${stat.attackType}</span>
+                        </td>
+                        <td>${stat.count}</td>
+                        <td>${stat.roverStates.join(', ') || 'N/A'}</td>
+                        <td>${stat.bands.join(', ') || 'N/A'}</td>
+                    </tr>
+                `;
+            });
+            
+            html += `
+                    </tbody>
+                </table>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        // Get total number of scenarios in the tree
+        function getTotalScenarios(node) {
+            let count = 0;
+            
+            function countScenarios(node) {
+                if (node.shape === "circle" || node.type === "scenario") {
+                    return 1;
+                }
+                
+                if (node.children) {
+                    return node.children.reduce((sum, child) => sum + countScenarios(child), 0);
+                }
+                
+                return 0;
+            }
+            
+            return countScenarios(node);
+        }
+
+        // Get badge class name based on attack type
+        function getBadgeClass(attackType) {
+            const type = attackType.toLowerCase();
+            if (type.includes('jamming') && type.includes('spoofing')) {
+                return 'combined';
+            } else if (type.includes('jamming')) {
+                return 'jamming';
+            } else if (type.includes('spoofing')) {
+                return 'spoofing';
+            } else if (type.includes('meaconing')) {
+                return 'meaconing';
+            } else {
+                return 'combined';
+            }
+        }
+
+        // Show/hide loading spinner
+        function showLoading(show) {
+            const container = document.querySelector('.visualization-container');
+            
+            if (show) {
+                const loading = document.createElement('div');
+                loading.className = 'loading';
+                loading.innerHTML = '<div class="spinner"></div>';
+                container.appendChild(loading);
+            } else {
+                const loading = container.querySelector('.loading');
+                if (loading) {
+                    loading.remove();
+                }
+            }
+        }
+
+        // Helper function to capitalize the first letter of a string
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Scenario ID: 2.6.4
+Attack Type: Spoofing + Jamming
+Standardized Attack: Jamming+Spoofing
+Rover State: dynamic
+Bands: L1
+Power: 0.01 W
+Power Category: Low Power (<100mW)
+Original Path: data/2024-09-12/scenario11_spoofing

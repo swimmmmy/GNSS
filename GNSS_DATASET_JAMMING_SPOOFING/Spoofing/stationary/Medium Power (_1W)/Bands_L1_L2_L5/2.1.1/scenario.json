@@ -1,0 +1,26 @@
+{
+  "scenario": "Scenario 1",
+  "scenario_id": "2.1.1",
+  "date": "2024-09-11",
+  "attack_type": "Spoofing",
+  "attack_parameters": {
+    "frequency_band": "L1, G1, L2, L5",
+    "power_min": "0.316 W",
+    "power_max": "0.316 W",
+    "Rover states": "stationary",
+    "attack_type": "Power ramping",
+    "jammer_model": "S",
+    "description": "Large position and time jump, with jamming faible (S) pwer ramp max 0.3 W",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-11T09:00:00Z",
+      "event": "Jamming started"
+    },
+    {
+      "timestamp_utc": "2024-09-11T09:38:00Z",
+      "event": "Jamming end"
+    }
+  ]
+}

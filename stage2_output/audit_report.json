@@ -1,0 +1,90 @@
+[
+  {
+    "experiment": "dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.1.3,3.1.4",
+    "rows": 1975,
+    "first_measurement_utc": "2024-09-10 07:29:52+00:00",
+    "last_measurement_utc": "2024-09-10 08:02:46+00:00",
+    "attack_intervals_utc": [
+      [
+        "2024-09-10 09:35:00+00:00",
+        "2024-09-10 09:41:00+00:00"
+      ],
+      [
+        "2024-09-10 09:50:00+00:00",
+        "2024-09-10 10:01:00+00:00"
+      ]
+    ],
+    "attack_overlap_seconds": 0,
+    "label_status": "UNLABELED - no time overlap",
+    "file": "meaconing_features_dynamic__Very_High_Power_(≥10W)__Bands_E1_L1_L2__3.1.3_3.1.4.csv",
+    "missing_l1": 41555
+  },
+  {
+    "experiment": "dynamic/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8",
+    "rows": 1274,
+    "first_measurement_utc": "2024-09-10 12:52:12+00:00",
+    "last_measurement_utc": "2024-09-10 13:13:25+00:00",
+    "attack_intervals_utc": [
+      [
+        "2024-09-10 14:55:00+00:00",
+        "2024-09-10 15:12:00+00:00"
+      ]
+    ],
+    "attack_overlap_seconds": 0,
+    "label_status": "UNLABELED - no time overlap",
+    "file": "meaconing_features_dynamic__Very_High_Power_(≥10W)__Bands_E1_L1_L2__3.2.8.csv",
+    "missing_l1": 51447
+  },
+  {
+    "experiment": "stationary/High Power (_10W)/Bands_E1_L1_L2/3.1.1,3.1.2",
+    "rows": 1634,
+    "first_measurement_utc": "2024-09-10 06:59:50+00:00",
+    "last_measurement_utc": "2024-09-10 07:27:03+00:00",
+    "attack_intervals_utc": [
+      [
+        "2024-09-10 09:00:00+00:00",
+        "2024-09-10 09:06:00+00:00"
+      ],
+      [
+        "2024-09-10 09:15:00+00:00",
+        "2024-09-10 09:25:00+00:00"
+      ]
+    ],
+    "attack_overlap_seconds": 0,
+    "label_status": "UNLABELED - no time overlap",
+    "file": "meaconing_features_stationary__High_Power_(_10W)__Bands_E1_L1_L2__3.1.1_3.1.2.csv",
+    "missing_l1": 27100
+  },
+  {
+    "experiment": "stationary/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.7",
+    "rows": 1226,
+    "first_measurement_utc": "2024-09-10 11:55:59+00:00",
+    "last_measurement_utc": "2024-09-10 12:16:24+00:00",
+    "attack_intervals_utc": [
+      [
+        "2024-09-10 14:00:00+00:00",
+        "2024-09-10 14:15:00+00:00"
+      ]
+    ],
+    "attack_overlap_seconds": 0,
+    "label_status": "UNLABELED - no time overlap",
+    "file": "meaconing_features_stationary__Very_High_Power_(≥10W)__Bands_E1_L1_L2__3.2.7.csv",
+    "missing_l1": 24609
+  },
+  {
+    "experiment": "stationary/Very High Power (≥10W)/Bands_E1_L1_L2/3.2.8",
+    "rows": 1363,
+    "first_measurement_utc": "2024-09-10 12:23:00+00:00",
+    "last_measurement_utc": "2024-09-10 12:45:42+00:00",
+    "attack_intervals_utc": [
+      [
+        "2024-09-10 14:25:00+00:00",
+        "2024-09-10 14:46:00+00:00"
+      ]
+    ],
+    "attack_overlap_seconds": 0,
+    "label_status": "UNLABELED - no time overlap",
+    "file": "meaconing_features_stationary__Very_High_Power_(≥10W)__Bands_E1_L1_L2__3.2.8.csv",
+    "missing_l1": 65338
+  }
+]

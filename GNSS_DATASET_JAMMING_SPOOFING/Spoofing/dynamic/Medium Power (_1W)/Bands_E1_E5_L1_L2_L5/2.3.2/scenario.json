@@ -1,0 +1,28 @@
+{
+  "scenario": "Scenario 4",
+  "scenario_id": "2.3.2",
+  "date": "2024-09-11",
+  "attack_type": "Spoofing",
+  "attack_parameters": {
+    "frequency_band": "L1, L2C, L5,E1, E5",
+    "power_min": "0.316 W",
+    "power_max": "0.316 W",
+    "rover_states": "dynamic",
+    "attack_type": "Small position jump with initial and continuous jamming",
+    "transmitter_equipment": "S",
+    "simulated_position": "North end of the football field - 69.27701401, 15.969328354, 45 m HAE",
+    "simulated_start_time": "Referenced to live GPS signals",
+    "description": "For sub-scenario 2.3.2, we simulate a small position jump with 5 minutes of initial jamming on L1, G1, B1I, E6, L2, E5b, L5 (2 W) before spoofing begins, then continuous jamming on other bands. The spoofing signals themselves are GPS L1 C/A, L2C, L5 and Galileo E1, E5, all at 0.316 W power.",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-11T14:40:00Z",
+      "event": "Initial jamming started"
+    },
+    {
+      "timestamp_utc": "2024-09-11T14:55:00Z",
+      "event": "Initial jamming ended"
+    }
+  ]
+}

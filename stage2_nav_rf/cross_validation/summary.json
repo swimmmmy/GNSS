@@ -1,0 +1,17 @@
+{
+  "folds": 5,
+  "total_confusion_matrix": [
+    [
+      2067,
+      131
+    ],
+    [
+      115,
+      4898
+    ]
+  ],
+  "pooled_recall": 0.9770596449231996,
+  "pooled_fpr": 0.05959963603275705,
+  "macro_recall": 0.9763435526320008,
+  "warning": "PROVISIONAL labels: UTC+2 hypothesis not independently confirmed. Other receiver/hardware not validated. Multiple 1-second samples within each experiment are temporally correlated."
+}

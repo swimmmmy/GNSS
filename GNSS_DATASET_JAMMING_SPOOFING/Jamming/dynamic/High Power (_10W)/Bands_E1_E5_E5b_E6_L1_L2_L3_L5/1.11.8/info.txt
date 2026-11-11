@@ -1,0 +1,8 @@
+Scenario ID: 1.11.8
+Attack Type: Jamming
+Standardized Attack: Jamming
+Rover State: dynamic
+Bands: E1,E5,E5b,E6,L1,L2,L3,L5
+Power: 1.58 W
+Power Category: High Power (<10W)
+Original Path: data/2024-09-09/scenario3_jamming

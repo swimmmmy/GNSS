@@ -1,0 +1,44 @@
+{
+  "scenario": "Scenario 2",
+  "scenario_id": "2.1.3,2.1.2,2.1.4",
+  "date": "2024-09-11",
+  "attack_type": "Spoofing",
+  "attack_parameters": {
+    "frequency_band": "L1,E1",
+    "power_min": "0.316 W",
+    "power_max": "0.316 W",
+    "rover_states": "stationary",
+    "attack_type": "Large position and time jump",
+    "transmitter_equipment": "S",
+    "simulated_position": "70 N, 10 E",
+    "simulated_start_time": "2024-10-01T12:00:00Z",
+    "description": "Incoherent position spoofing from a stationary spoofer using synthetic ephemerides. No jamming. Demonstrates large position and time jumps for: Galileo E1 only (2.1.3), GPS L1 C/A only (2.1.2), and GPS L1 C/A + Galileo E1 (2.1.4).",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-11T10:00:00Z",
+      "event": "Jamming started (2.1.3)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T10:16:30Z",
+      "event": "Jamming end (2.1.3)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T10:20:00Z",
+      "event": "Jamming started (2.1.2)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T10:35:30Z",
+      "event": "Jamming end (2.1.2)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T10:40:00Z",
+      "event": "Jamming started (2.1.4)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T10:55:30Z",
+      "event": "Jamming end (2.1.4)"
+    }
+  ]
+}

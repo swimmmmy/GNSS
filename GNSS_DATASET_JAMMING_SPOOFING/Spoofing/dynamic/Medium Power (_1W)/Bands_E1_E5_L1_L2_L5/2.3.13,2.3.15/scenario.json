@@ -1,0 +1,48 @@
+{
+  "scenario": "Scenario 8",
+  "scenario_id": "2.3.13,2.3.15",
+  "date": "2024-09-11",
+  "attack_type": "Spoofing",
+  "attack_parameters": {
+    "frequency_band": "E1,E5,L1,L2,L5",
+    "power_min": "0.316 W",
+    "power_max": "0.316 W",
+    "rover_states": "dynamic",
+    "attack_type": "Simulated flying (routes 4 & 2)",
+    "transmitter_equipment": "S",
+    "description": "Scenario 8 includes two flying sub-scenarios (both no jamming). (1) 2.3.13: Drone scenario (route 4), spoofing GPS L1/L2/L5 + Galileo E1/E5 from 69.277014014, 15.969328354, 40 m HAE. (2) 2.3.15: Helicopter scenario (route 2), spoofing the same signals from over the sea 1 km N (Midnattskj\u00e6ran) at 200 m HAE. All transmissions are 0.316 W and corrected for signal delay to ensure coherent signals, with start times referenced to live GPS.",
+    "zone": "1",
+    "sub_scenario_2_3_13": {
+      "signals": "L1, L2C, L5; E1, E5",
+      "jamming": "None",
+      "simulated_position": "69.277014014, 15.969328354, 40 m HAE (Drone, route 4)",
+      "simulated_start_time": "Referenced to live GPS signals",
+      "notes": "Coherent signals; corrected for delay."
+    },
+    "sub_scenario_2_3_15": {
+      "signals": "L1 , L2C, L5,  E1, E5",
+      "jamming": "None",
+      "simulated_position": "Over the sea 1 km N (Midnattskj\u00e6ran) at 200 m HAE (Helicopter, route 2)",
+      "simulated_start_time": "Referenced to live GPS signals",
+      "notes": "Coherent signals; corrected for delay."
+    }
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-11T17:30:00Z",
+      "event": "Initial jamming started (sub-scenario 2.3.13)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T17:39:00Z",
+      "event": "Initial jamming ended (sub-scenario 2.3.13)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T17:47:00Z",
+      "event": "Continuous jamming started on other bands (sub-scenario 2.3.15)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T18:00:30Z",
+      "event": "Continuous jamming ended (sub-scenario 2.3.15)"
+    }
+  ]
+}

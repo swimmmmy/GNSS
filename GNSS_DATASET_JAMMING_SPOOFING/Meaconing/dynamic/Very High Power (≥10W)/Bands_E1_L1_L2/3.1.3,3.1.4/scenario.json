@@ -1,0 +1,34 @@
+{
+  "scenario": "Scenario 2",
+  "scenario_id": "3.1.3,3.1.4",
+  "date": "2024-09-10",
+  "attack_type": "Meaconing",
+  "attack_parameters": {
+    "frequency_band": "L1, E1, B1C, L2",
+    "power_min": "10 W",
+    "power_max": "10 W",
+    "Rover states": "dynamic",
+    "attack_type": "Stationary meaconing from single receiver",
+    "jammer_model": "F1.1",
+    "description": "Stationary meaconing from single receiver, band L1, E1, B1C, L2, power is 1 watts using F1.1.",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-10T09:35:00Z",
+      "event": "Meaconing started"
+    },
+    {
+      "timestamp_utc": "2024-09-10T09:41:00Z",
+      "event": "Meaconing end"
+    },
+    {
+      "timestamp_utc": "2024-09-10T09:50:00Z",
+      "event": "Meaconing started"
+    },
+    {
+      "timestamp_utc": "2024-09-10T10:01:00Z",
+      "event": "Meaconing end"
+    }
+  ]
+}

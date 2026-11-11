@@ -1,0 +1,59 @@
+{
+  "warning": "PROVISIONAL: attack time offset not independently confirmed",
+  "input": "stage2_nav_rf/nav_features_provisional.csv",
+  "label_column": "label",
+  "group_column": "experiment",
+  "excluded_columns": [
+    "experiment",
+    "iTOW",
+    "label",
+    "lat",
+    "lon",
+    "second",
+    "time"
+  ],
+  "features": [
+    "fixType",
+    "numSV",
+    "height",
+    "hAcc",
+    "vAcc",
+    "velN",
+    "velE",
+    "velD",
+    "gSpeed",
+    "headMot",
+    "sAcc",
+    "headAcc",
+    "pDOP",
+    "speed_mps",
+    "distance_m_delta_1s",
+    "speed_mps_delta_1s",
+    "hAcc_delta_1s",
+    "pDOP_delta_1s",
+    "numSV_delta_1s",
+    "distance_m_delta_3s",
+    "speed_mps_delta_3s",
+    "hAcc_delta_3s",
+    "pDOP_delta_3s",
+    "numSV_delta_3s",
+    "distance_m_delta_5s",
+    "speed_mps_delta_5s",
+    "hAcc_delta_5s",
+    "pDOP_delta_5s",
+    "numSV_delta_5s"
+  ],
+  "confusion_matrix": [
+    [
+      2033,
+      165
+    ],
+    [
+      108,
+      4905
+    ]
+  ],
+  "overall_recall": 0.9784560143626571,
+  "overall_fpr": 0.07506824385805277,
+  "overall_accuracy": 0.9621411732075995
+}

@@ -1,0 +1,46 @@
+{
+  "scenario": "Scenario 6",
+  "scenario_id": "2.3.10,2.3.11",
+  "date": "2024-09-11",
+  "attack_type": "Spoofing",
+  "attack_parameters": {
+    "frequency_band": "E1,E5,L1,L2,L5",
+    "power_min": "0.316 W",
+    "power_max": "0.316 W",
+    "rover_states": "stationary",
+    "attack_type": "Simulated driving (route 1)",
+    "transmitter_equipment": "S",
+    "description": "Scenario 6 includes two sub-scenarios, both using broadcast (true) ephemerides on route 1 from Bleik community house parking lot. Sub-scenario 2.3.10 has no jamming and spoofs GPS (L1/L2/L5) + Galileo (E1/E5) signals at 0.316 W. Sub-scenario 2.3.11 includes 5 minutes of initial jamming at 2 W (L1, G1, B1I, E6, L2, E5b, L5) followed by continuous jamming on other bands, while spoofing the same signals at 0.316 W. Start times are referenced to live GPS signals.",
+    "zone": "1",
+    "sub_scenario_2_3_10": {
+      "signals": "E1,E5,L1,L2,L5",
+      "jamming": "None",
+      "simulated_position": "Bleik community house parking lot",
+      "simulated_start_time": "Referenced to live GPS signals"
+    },
+    "sub_scenario_2_3_11": {
+      "signals": "E1,E5,L1,L2,L5",
+      "jamming": "5 minutes of initial jamming at 2 W, then continuous jamming on other bands",
+      "simulated_position": "Bleik community house parking lot",
+      "simulated_start_time": "Referenced to live GPS signals"
+    }
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-11T15:55:00Z",
+      "event": "Initial jamming started (sub-scenario 2.3.10)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T16:06:00Z",
+      "event": "Initial jamming ended (sub-scenario 2.3.10)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T16:10:00Z",
+      "event": "Continuous jamming started on other bands (sub-scenario 2.3.11)"
+    },
+    {
+      "timestamp_utc": "2024-09-11T16:26:00Z",
+      "event": "Continuous jamming ended (sub-scenario 2.3.11)"
+    }
+  ]
+}

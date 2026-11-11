@@ -1,0 +1,8 @@
+Scenario ID: 2.1.3,2.1.2,2.1.4
+Attack Type: Spoofing
+Standardized Attack: Spoofing
+Rover State: stationary
+Bands: E1,L1
+Power: 0.316 W
+Power Category: Medium Power (<1W)
+Original Path: data/2024-09-11/scenario2_spoofing

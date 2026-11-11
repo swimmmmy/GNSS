@@ -1,0 +1,26 @@
+{
+  "scenario": "Scenario 3",
+  "scenario_id": "3.2.7",
+  "date": "2024-09-10",
+  "attack_type": "Meaconing",
+  "attack_parameters": {
+    "frequency_band": "L1, E1, B1C, L2",
+    "power_min": "10 W",
+    "power_max": "10 W",
+    "Rover states": "stationary",
+    "attack_type": "Stationary meaconing from two receivers",
+    "jammer_model": "F1.1",
+    "description": "7 Meacon F1.1 \u201dPorcellus\u201d: RX1 and RX2 at 10 W alternating with different switching frequencies",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-10T14:00:00Z",
+      "event": "Meaconing started"
+    },
+    {
+      "timestamp_utc": "2024-09-10T14:15:00Z",
+      "event": "Meaconing end"
+    }
+  ]
+}

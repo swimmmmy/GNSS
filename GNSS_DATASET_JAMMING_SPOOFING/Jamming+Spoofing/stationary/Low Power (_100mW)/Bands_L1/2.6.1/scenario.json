@@ -1,0 +1,30 @@
+{
+  "scenario": "Scenario 9",
+  "scenario_id": "2.6.1",
+  "date": "2024-09-12",
+  "attack_type": "Spoofing + Jamming",
+  "attack_parameters": {
+    "frequency_band": "L1, G1",
+    "frequency_band_spoofed": "L1",
+    "frequency_band_jammed": "G1",
+    "power_min": "0.01 W",
+    "power_max": "0.01 W",
+    "rover_states": "stationary",
+    "attack_type": "Incoherent GPS position/time spoofing + jamming",
+    "transmitter_equipment": "F1.2",
+    "simulated_position": "69.212409N, 15.858314E",
+    "simulated_start_time": "2024-09-12T10:03:00Z",
+    "description": "2.6.1: Spoofer is stationary in a vehicle, roof antenna at ~69.212409N,15.858314E. Spoofed signals (GPS L1 only) at 10 dBm begin at true position/time. After 10 minutes, the spoofed position starts moving south at 40 km/h while the real spoofer stays still. Simultaneous jamming on GLONASS G1 at 10 dBm. Scenario runs until 10:35.",
+    "zone": "1"
+  },
+  "attack_log": [
+    {
+      "timestamp_utc": "2024-09-12T10:10:00Z",
+      "event": "Initial jamming started "
+    },
+    {
+      "timestamp_utc": "2024-09-12T10:31:00Z",
+      "event": "Initial jamming ended "
+    }
+  ]
+}
